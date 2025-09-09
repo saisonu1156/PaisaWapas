@@ -1,0 +1,56 @@
+/* Container for entire layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6; 
+}
+
+/* Sidebar stays fixed width of 16rem (256px) */
+.admin-layout > *:first-child {
+    width: 16rem; 
+    flex-shrink: 0;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16rem; 
+    width: calc(100% - 16rem);
+    background-color: #f3f4f6; 
+}
+
+/* Page content inside main content */
+.page-content {
+    flex: 1;
+    padding: 1.5rem; 
+    overflow-y: auto;
+}
+
+/* ---------------- Responsive for Mobile ---------------- */
+@media (max-width: 768px) {
+    /* Sidebar collapses */
+    .admin-layout > *:first-child {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Main content takes full width */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Page content padding reduced for smaller screens */
+    .page-content {
+        padding: 1rem;
+    }
+}
+
+/* Optional: Extra small devices (<480px) */
+@media (max-width: 480px) {
+    .page-content {
+        padding: 0.75rem;
+    }
+}

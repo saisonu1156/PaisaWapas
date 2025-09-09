@@ -1,0 +1,142 @@
+/* Navbar container */
+.admin-navbar {
+    background-color: #111827; 
+    color: #fff;
+    padding: 1.5rem 2.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 50;
+}
+
+/* Inner container */
+.nav-container {
+    max-width: 1280px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo + title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; 
+}
+
+.logo {
+    width: 36px; 
+    height: 36px;
+    object-fit: contain;
+}
+
+.title {
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    letter-spacing: 0.025em; 
+}
+
+/* Hamburger menu for small screens */
+.hamburger {
+    display: none;
+}
+
+.hamburger button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.hamburger-icon {
+    width: 28px; 
+    height: 28px; 
+    color: #fff;
+}
+
+/* Profile desktop */
+.profile-desktop {
+    display: block;
+}
+
+.profile-img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #374151; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.profile-img:hover {
+    opacity: 0.9;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+.menu-item {
+    display: block;
+    color: #d1d5db; 
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.25rem 0;
+}
+
+.menu-item:hover {
+    color: #fff;
+}
+
+.mobile-profile {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.profile-img-mobile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #4b5563; 
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    /* Hamburger visible */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide desktop profile */
+    .profile-desktop {
+        display: none;
+    }
+
+    /* Mobile menu styling */
+    .mobile-menu {
+        display: none; 
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem; 
+        background-color: #1f2937; 
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Menu items inside mobile menu */
+    .mobile-menu .menu-item {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    /* Mobile profile inside menu */
+    .mobile-profile {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.75rem;
+    }
+}
