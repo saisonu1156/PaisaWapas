@@ -5,7 +5,6 @@
 
 ![React](https://img.shields.io/badge/React-18.2-blue)
 ![Vite](https://img.shields.io/badge/Vite-Latest-purple)
-![CSS](https://img.shields.io/badge/TailwindCSS-3.3.0-blueviolet)
 
 ---
 
